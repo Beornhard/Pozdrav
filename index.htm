@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С 8 Марта!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            background: url('https://s.poembook.ru/theme/33/9e/85/353a578aa9a8927cffe76d8ad691379c7b311132.jpeg') no-repeat center center/cover; /* Весенний фон */
+            color: #333;
+            overflow: hidden;
+            position: relative;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #e91e63; /* Розовый цвет для праздника */
+            font-weight: bold;
+        }
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #555;
+        }
+        .signature {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #0078D7;
+            margin-top: 30px;
+        }
+        .logo {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+        .flowers {
+            position: absolute;
+            width: 100px;
+            opacity: 0.8;
+            animation: float 6s ease-in-out infinite;
+            border-radius: 50%; /* Закругленные цветы */
+            filter: drop-shadow(0 0 5px rgba(233, 30, 99, 0.5)); /* Тень для стиля */
+        }
+        .flowers.left {
+            top: -50px;
+            left: -50px;
+            animation-delay: 2s;
+        }
+        .flowers.right {
+            bottom: -50px;
+            right: -50px;
+            animation-delay: 4s;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(10deg);
+            }
+        }
+        /* Дождик из цветов */
+        .flower-rain {
+            position: absolute;
+            top: -100px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+        .flower-rain div {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: url('https://avatars.mds.yandex.net/i?id=922064e8cb952f04f28372ce24149baf_l-12612451-images-thumbs&n=13') no-repeat center center/cover;
+            opacity: 0.7;
+            animation: fall linear infinite;
+            border-radius: 50%; /* Закругленные цветы */
+        }
+        @keyframes fall {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Дождик из цветов -->
+    <div class="flower-rain">
+        <div style="left: 5%; animation-duration: 6s;"></div>
+        <div style="left: 15%; animation-duration: 8s;"></div>
+        <div style="left: 25%; animation-duration: 7s;"></div>
+        <div style="left: 35%; animation-duration: 9s;"></div>
+        <div style="left: 45%; animation-duration: 6s;"></div>
+        <div style="left: 55%; animation-duration: 8s;"></div>
+        <div style="left: 65%; animation-duration: 7s;"></div>
+        <div style="left: 75%; animation-duration: 9s;"></div>
+        <div style="left: 85%; animation-duration: 6s;"></div>
+        <div style="left: 95%; animation-duration: 8s;"></div>
+    </div>
+
+    <div class="container">
+        <!-- Цветы для украшения -->
+        <img src="https://avatars.mds.yandex.net/i?id=4b466a4fd9220adf7240239597c57cf7_l-5288251-images-thumbs&n=13" alt="Цветы" class="flowers left">
+        <img src="https://avatars.mds.yandex.net/i?id=4b466a4fd9220adf7240239597c57cf7_l-5288251-images-thumbs&n=13" alt="Цветы" class="flowers right">
+
+        <!-- Логотип компании -->
+        <img src="https://i.pinimg.com/originals/b3/a6/11/b3a611a2696e27ba85e9aebbc93a6538.png" alt="Логотип ООО Новая Платформа" class="logo">
+
+        <!-- Заголовок и текст поздравления -->
+        <h1>С 8 Марта!</h1>
+        <p>
+            От всей души поздравляем тебя с Международным женским днём!<br>
+            Пусть весна принесёт в твою жизнь яркие краски, вдохновение и радость!<br>
+            Желаем тебе крепкого здоровья, счастья и новых успехов во всех начинаниях!
+        </p>
+        <p class="signature">С наилучшими пожеланиями, <br>Алексей!"</p>
+    </div>
+</body>
+</html>
